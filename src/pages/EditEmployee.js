@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { editEmployee } from "../redux/actions/index";
 
 function EditEmployee() {
+  //state for editing existing employee details
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,6 +35,7 @@ function EditEmployee() {
     }
   }, [employee]);
 
+  //submitting employee edited details
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -57,10 +59,11 @@ function EditEmployee() {
     setCity("");
     setState("");
 
-    history.push("/");
+    history.push("/home");
   };
 
   return (
+    //form for editing existing employees
     <div className="add-employees container">
       {employee ? (
         <>

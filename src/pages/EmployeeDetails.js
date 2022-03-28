@@ -9,6 +9,7 @@ function EmployeeDetails() {
   );
 
   return (
+    //employee details view
     <div>
       <div className="container details">
         <h3 className="mt-3 mb-4">{employee.firstname}'s Details</h3>
@@ -25,9 +26,6 @@ function EmployeeDetails() {
             <h5 className="card-text">
               Address: No {employee.street}, {employee.city}, {employee.state}
             </h5>
-            <a onClick={() => window.location = `mailto:${employee.email}`} className="btn btn-dark" >
-              Send Email
-            </a>
           </div>
         </div>
       </div>

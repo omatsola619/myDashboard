@@ -13,6 +13,7 @@ function AddEmployees() {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  //state for employee details
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,6 +23,7 @@ function AddEmployees() {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
 
+  //submitting employee details
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -45,9 +47,10 @@ function AddEmployees() {
     setCity("");
     setState("");
 
-    history.push("/");
+    history.push("/home");
   };
   return (
+    //form for adding new employees
     <div className="add-employees container">
       <h2 className="add-header">Add New Employee</h2>
       <form onSubmit={handleSubmit}>
@@ -81,16 +84,6 @@ function AddEmployees() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        {/* <div className="form-group">
-          <label htmlFor="role">Employee Role</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="role"
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-          />
-        </div> */}
         <div className="form-group">
           <label for="role">Role</label>
           <select
