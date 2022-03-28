@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+.form-group label{
+  margin-bottom: 5px;
+}
+.add-header{
+  margin: 20px 0;
+}
+.submit{
+  float: right;
+  margin-bottom: 10px;
+}
+.cover{
+  width: 100%;
+}
+@media screen and (max-width: 528px) {
+  .cover{
+    overflow: scroll;
+  }
+}
+.delete{
+  color: red;
+  border: none;
+  outline: black;
+  background: none;
+}
+header{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+}
+header input{
+  padding-left: 5px;
+  height: 40px;
+  border-radius: 0;
+  border: 1px solid black;
+}
+.search-btn{
+  height: 40px;
+  overflow: hidden;
+  border-radius: 0;
+  border: 1px solid black;
+}
+.search-form{
+  display: flex;
+  align-items: center;
+}
+.card{
+  z-index: -2;
+}
+.card-body h5{
+  margin-bottom: 30px;
+}
+.details{
+  z-index: -1;
+}
+.view{
+  color: blue;
+  text-decoration: none;
+}
+.edit{
+  color: green;
+  text-decoration: none;
+}
+.action{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
